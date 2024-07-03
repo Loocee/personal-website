@@ -1,0 +1,154 @@
+body {
+    background-color: #F6F0CF;
+    display: flex;
+    margin: 0%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+i {
+  font-size: 24px;
+  color: black;
+}
+
+.bottom {
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 60% 30% 5% 5%;
+  grid-template-rows: 50% 30% 20%;
+}
+
+.bottom-left {
+    background-color: #EEF0F4;
+    grid-area: 1/1/4/3;
+    padding: 30px;
+    margin-left: 20px;
+}
+
+.bottom-right {
+  grid-area: 3/4/4/5;
+  margin: 30px 0 0 40px;
+}
+
+.parent {
+    margin: 60px;
+}
+
+.top, .top-left, .top-left-bottom {
+  display: flex;
+}
+
+.top {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-left {
+  flex-direction: column;
+  margin-left: 100px;
+}
+
+.top-left, .top-left-bottom {
+  gap: 20px;
+}
+
+.top-right > p {
+  text-align: center;
+}
+
+li, .ubuntu-mono-regular {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+  }
+  
+  .prata-regular {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6rem;
+  }
+
+  @media (min-width: 768px) {
+    .bottom > i {
+      margin: 5px;
+    }
+    .bottom {
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .prata-regular {
+      font-size: 4rem;
+    }
+
+    .top-left {
+      margin-left: 10px;
+    }
+
+    .bottom-right {
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .bottom {
+      width: 100%;
+    }
+
+    .bottom, .top {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    } 
+
+    .bottom-left, .top-left {
+      margin: 0%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .top {
+      margin-bottom: 40px;
+    }
+
+    .parent {
+      margin: 0;
+    }
+
+    .bottom-left {
+      text-align: justify;
+      border-radius: 20px;
+    }
+
+    .bottom-right {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .prata-regular {
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 375px) {
+    i {
+      font-size: 16px;
+    }
+
+    .prata-regular {
+      font-size: 2rem;
+    }
+  }
